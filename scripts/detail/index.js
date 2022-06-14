@@ -8,9 +8,9 @@ const activeDropDown = (el, num) => {
         el.parentElement.classList.add("active");
 
         if (num == 0) {
-            document.querySelector('#page iframe').src = "/Sparklingj/whatisnuemo/";
+            document.querySelector('#page iframe').src = "/neumo-io/whatisnuemo/";
         } else if (num == 1) {
-            document.querySelector('#page iframe').src = "/Sparklingj/components/";
+            document.querySelector('#page iframe').src = "/neumo-io/components/";
         }
     }, 200);
 
@@ -59,23 +59,27 @@ const inputChange = (el) => {
     ];
     const matchedMenu2 = category2.find((item) => item.data.indexOf(el.value.toLowerCase()) >= 0);
     const matchedMenu1 = category1.find((item) => item.data.indexOf(el.value.toLowerCase()) >= 0);
-    setTimeout(()=>{
+    setTimeout(() => {
         if (category2.some(item => item.data.indexOf(el.value.toLowerCase()) >= 0)) {
-            if(now === undefined || matchedMenu2.category !== now.category)
+            if (now === undefined || matchedMenu2.category !== now.category)
                 activeDropDown(document.querySelector(".drop-down:first-child li"), 0);
-            if(now === undefined || matchedMenu2.menu !== now.menu)
-                setTimeout(()=>{document.querySelectorAll(".drop-down:first-child li")[matchedMenu2.menu + 1].click();},1000);
+            if (now === undefined || matchedMenu2.menu !== now.menu)
+                setTimeout(() => {
+                    document.querySelectorAll(".drop-down:first-child li")[matchedMenu2.menu + 1].click();
+                }, 1000);
             now = matchedMenu2;
-        }else if (category1.some(item => item.data.indexOf(el.value.toLowerCase()) >= 0)) {
+        } else if (category1.some(item => item.data.indexOf(el.value.toLowerCase()) >= 0)) {
 
-            if(now === undefined || matchedMenu1.category !== now.category)
+            if (now === undefined || matchedMenu1.category !== now.category)
                 activeDropDown(document.querySelector(".drop-down:last-child li"), 1);
-            if(now === undefined || matchedMenu1.menu !== now.menu)
-                setTimeout(()=>{document.querySelectorAll(".drop-down:last-child li")[matchedMenu1.menu + 1].click();},1000);
+            if (now === undefined || matchedMenu1.menu !== now.menu)
+                setTimeout(() => {
+                    document.querySelectorAll(".drop-down:last-child li")[matchedMenu1.menu + 1].click();
+                }, 1000);
             now = matchedMenu1;
         }
 
-    },200);
+    }, 200);
 
 }
 
@@ -102,11 +106,15 @@ const menuClick = (el, percentage) => {
     document.querySelector('iframe').contentWindow.scroll(percentage);
 }
 
+const openSidebar = () => {
+
+}
+
 function active(titleIdx, subtitleIdx) {
     const TITLE_EL = document.querySelectorAll('.drop-down')[titleIdx];
     const SUBTITLE_EL = TITLE_EL.querySelectorAll('li');
     if (!SUBTITLE_EL[subtitleIdx + 1].classList.contains('active')) {
-        snd.play(Snd.SOUNDS.BUTTON);
+        snd.play(Snd.SOUNDS.DISABLED);
     }
     SUBTITLE_EL.forEach((li, idx) => {
         li.classList.remove('active');

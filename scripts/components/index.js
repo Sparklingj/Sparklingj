@@ -7,7 +7,6 @@ window.onscroll = (e) => {
         document.body.clientHeight, document.documentElement.clientHeight
     ) - sbHeight;
     const percentage = parseInt(this.scrollY) / parseInt(scrollHeight) * 100;
-    console.log(percentage);
     if (percentage >= 0 && percentage < 15) {
         window.parent.active(1, 0);
     } else if (percentage >= 20 && percentage < 40) {
@@ -45,6 +44,22 @@ const toggle = (el) => {
 }
 
 /* toggle end */
+
+/* select */
+const selectMenu = (el, className)=>{
+    document.querySelectorAll('.select.first .item').forEach((item)=>{
+        item.classList.remove('active');
+    })
+    el.classList.add('active');
+    document.querySelector('.indicator').classList.remove('first')
+    document.querySelector('.indicator').classList.remove('second')
+    document.querySelector('.indicator').classList.remove('third')
+
+    document.querySelector('.indicator').classList.add(className);
+    snd.play(Snd.SOUNDS.SELECT);
+}
+/* select end */
+
 function scroll(percentage) {
 
     let scrollHeight = Math.max(

@@ -132,15 +132,15 @@
                                 Button
                             </div>
                         </button>
-                        <button class="fourth">
-                            <div class="status hover">
+                        <button class="fourth snd__disabled">
+                            <div class="status hover snd__disabled">
                                 <div class="border"></div>
                                 <div class="solid">
                                 </div>
                                 <div class="dynamic-size">
                                     Button
                                 </div>
-                                <div class="content snd__button align-items-center justify-content-center">
+                                <div class="content snd__disabled align-items-center justify-content-center">
                                     Button
                                 </div>
                             </div>
@@ -175,23 +175,19 @@
                     By using the example code, you can use the alarm message quickly and easily.
                 </p>
                 <div class="frame">
-                    <div class="select">
-                        <li class="item">
-                            <span>Menu1</span>
-                            <div class="indicator">
-                                <div class="before"></div>
-                                <div class="normal"></div>
-                                <div class="after"></div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <span>Menu2</span>
-                            <div class="indicator">
-                                <div class="before"></div>
-                                <div class="normal"></div>
-                                <div class="after delay"></div>
-                            </div>
-                        </li>
+                    <div class="select first">
+                        <div class="container">
+                            <li class="item active" onclick="selectMenu(this,'first')">
+                                <span>Menu1</span>
+                            </li>
+                            <li class="item" onclick="selectMenu(this,'second')">
+                                <span>Menu2</span>
+                            </li>
+                            <li class="item" onclick="selectMenu(this,'third')">
+                                <span>Menu3</span>
+                            </li>
+                        </div>
+                        <div class="indicator first"></div>
                     </div>
                 </div>
             </article>

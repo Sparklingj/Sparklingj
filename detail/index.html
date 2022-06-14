@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.svg">
-    <title>Title</title>
+    <title>Neumo - the next generation neuomorphism</title>
     <script src="https://colorjs.io/dist/color.js"></script>
     <style>
         @import '../styles/init.css';
@@ -31,14 +31,14 @@
                 </button>
             </div>
             <div class="content padding-24">
-                <a href="/Sparklingj"><img class="logo" src="../assets/logo.svg"/></a>
+                <a href="/neumo-io"><img class="logo" src="../assets/logo.svg"/></a>
                 <div class="search-box">
                     <img src="../assets/search.svg"/>
                     <span>Search Neumo</span>
                     <input class="search-input snd__type snd__transition_up" required onfocusin="focusin(this)"
                            onfocusout="focusout(this)" onkeyup="inputChange(this)"/>
                 </div>
-                <button class="button round">
+                <button class="button round" onclick="openSidebar()">
                     <div class="border"></div>
                     <div class="solid cg-20">
                     </div>
@@ -64,8 +64,8 @@
                                   fill="#3D454D"/>
                         </svg>
                     </li>
-                    <li class="active snd__button" onclick="menuClick(this,0)">Overview</li>
-                    <li class="snd__button" onclick="menuClick(this,61)">Color System</li>
+                    <li class="active snd__disabled" onclick="menuClick(this,0)">Overview</li>
+                    <li class="snd__disabled" onclick="menuClick(this,61)">Color System</li>
                 </div>
                 <div class="drop-down">
                     <li class="snd__transition_up" onclick="activeDropDown(this,1)">
@@ -75,10 +75,10 @@
                                   fill="#3D454D"/>
                         </svg>
                     </li>
-                    <li class="active snd__button" onclick="menuClick(this,0)">Buttons</li>
-                    <li class="snd__button" onclick="menuClick(this,21)">Toggle Switch</li>
-                    <li class="snd__button" onclick="menuClick(this,41)">Select Tab</li>
-                    <li class="snd__button" onclick="menuClick(this,61)">Text Input</li>
+                    <li class="active snd__disabled" onclick="menuClick(this,0)">Buttons</li>
+                    <li class="snd__disabled" onclick="menuClick(this,21)">Toggle Switch</li>
+                    <li class="snd__disabled" onclick="menuClick(this,41)">Select Tab</li>
+                    <li class="snd__disabled" onclick="menuClick(this,61)">Text Input</li>
                 </div>
             </section>
             <section class="card">
@@ -94,7 +94,7 @@
             </section>
         </aside>
         <section id="page">
-            <iframe class="" src="/Sparklingj/whatisnuemo/index.html" frameborder="0" border="0" cellspacing="0"
+            <iframe class="" src="/neumo-io/whatisnuemo/index.html" frameborder="0" border="0" cellspacing="0"
                     style="border-style: none;" onload="siteLoad(this)"></iframe>
         </section>
 
