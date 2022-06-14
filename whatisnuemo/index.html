@@ -24,6 +24,7 @@
                     It's because 'Neumorphism' rarely follow the 'Web Content Accessibility Guidelines'.<br>
                     I totally agree with that, so I tried to design components that would improve accesssibility.
                 </p>
+                <img src="../assets/preview.png"/>
                 <div class="neumo-introduce">
                     <div class="logo">
                         <img class="image" src="../assets/main/hover.svg">
@@ -54,109 +55,147 @@
                 <p>
                     To make it happen, we used ‘CIE LCH color system’.
                 </p>
-                <h4>HSL</h4>
+                <h4>Why don’t we use HSL Color?</h4>
+                <p>
+                    In order to automate neumorphism design, we need to programmatically present the visual intensity of the<br/> shadow values. However, we see the intensity of shadows differently by actual color lightness/darkness even if it<br/> is set with the same lightness difference.<br/>
+                    You can see that the green, yellow, blue, and red boxes below have different shadow intensities.<br/>
+                    <strong>Only the hue has been adjusted, but we feel the tones of colors are different.<br/> (green & yellow are brighter than blue & red)</strong>
+                </p>
                 <div class="container first">
                     <div>
                         <div class="layout"></div>
                         <p>
-                            HSL(120, 70, 45)
+                            <span>KeyColor: </span>
+                            <span><strong class="pink">H120</strong> / S70 / L60</span>
                         </p>
                         <p>
-                            HSL(120, 70, 60)
+                            <span>Light: </span>
+                            <span><strong class="pink">H120</strong> / S70 / L45</span>
                         </p>
                         <p>
-                            HSL(120, 70, 75)
-                        </p>
-                    </div>
-                    <div>
-                        <div class="layout"></div>
-                        <p>
-                            HSL(60, 70, 45)
-                        </p>
-                        <p>
-                            HSL(60, 70, 60)
-                        </p>
-                        <p>
-                            HSL(60, 70, 75)
+                            <span>Dark: </span>
+                            <span><strong class="pink">H120</strong> / S70 / L75</span>
                         </p>
                     </div>
                     <div>
                         <div class="layout"></div>
                         <p>
-                            HSL(240, 70, 45)
+                            <span>KeyColor: </span>
+                            <span><strong class="pink">H60</strong> / S70 / L60</span>
                         </p>
                         <p>
-                            HSL(240, 70, 60)
+                            <span>Light: </span>
+                            <span><strong class="pink">H60</strong> / S70 / L45</span>
                         </p>
                         <p>
-                            HSL(240, 70, 75)
+                            <span>Dark: </span>
+                            <span><strong class="pink">H60</strong> / S70 / L75</span>
                         </p>
                     </div>
                     <div>
                         <div class="layout"></div>
                         <p>
-                            HSL(360, 70, 45)
+                            <span>KeyColor: </span>
+                            <span><strong class="pink">H240</strong> / S70 / L60</span>
                         </p>
                         <p>
-                            HSL(360, 70, 60)
+                            <span>Light: </span>
+                            <span><strong class="pink">H240</strong> / S70 / L45</span>
                         </p>
                         <p>
-                            HSL(360, 70, 75)
+                            <span>Dark: </span>
+                            <span><strong class="pink">H240</strong> / S70 / L75</span>
+                        </p>
+                    </div>
+                    <div>
+                        <div class="layout"></div>
+                        <p>
+                            <span>KeyColor: </span>
+                            <span><strong class="pink">H360</strong> / S70 / L60</span>
+                        </p>
+                        <p>
+                            <span>Light: </span>
+                            <span><strong class="pink">H360</strong> / S70 / L45</span>
+                        </p>
+                        <p>
+                            <span>Dark: </span>
+                            <span><strong class="pink">H360</strong> / S70 / L75</span>
                         </p>
                     </div>
                 </div>
-                <h4>LCH</h4>
+                <h4>How does it come with LCH Color?</h4>
+                <p>
+                    Unlike other color systems, LCH calibrated the visual tone that the user feel.<br/>
+                    Changing the hue of LCH color shows the real hue that people think.<br/>
+                    <strong>Test your own color & intensity of shadows!</strong>
+                </p>
                 <div class="container second">
                     <div>
                         <div class="layout"></div>
                         <p>
-                            LCH(88, 61, 139)
+                            <span>KeyColor: </span>
+                            <span><strong class="blue">L80</strong> / C90 / H140</span>
                         </p>
                         <p>
-                            LCH(82, 91, 136)
+                            <span>Light: </span>
+                            <span><strong class="blue">L90</strong> / C90 / H140</span>
                         </p>
                         <p>
-                            LCH(73, 94, 145)
-                        </p>
-                    </div>
-                    <div>
-                        <div class="layout"></div>
-                        <p>
-                            LCH(88, 25, 59)
-                        </p>
-                        <p>
-                            LCH(82, 40, 59)
-                        </p>
-                        <p>
-                            LCH(73, 94, 60)
+                            <span>Dark: </span>
+                            <span><strong class="blue">L70</strong> / C90 / H140</span>
                         </p>
                     </div>
                     <div>
                         <div class="layout"></div>
                         <p>
-                            LCH(88, 21, 241)
+                            <span>KeyColor: </span>
+                            <span><strong class="blue">L80</strong> / C90 / H60</span>
                         </p>
                         <p>
-                            LCH(82, 32, 240)
+                            <span>Light: </span>
+                            <span><strong class="blue">L90</strong> / C90 / H60</span>
                         </p>
                         <p>
-                            LCH(73, 48, 240)
+                            <span>Dark: </span>
+                            <span><strong class="blue">L70</strong> / C90 / H60</span>
                         </p>
                     </div>
                     <div>
                         <div class="layout"></div>
                         <p>
-                            LCH(88, 18, 0)
+                            <span>KeyColor: </span>
+                            <span><strong class="blue">L80</strong> / C90 / H240</span>
                         </p>
                         <p>
-                            LCH(82, 29, 1)
+                            <span>Light: </span>
+                            <span><strong class="blue">L90</strong> / C90 / H240</span>
                         </p>
                         <p>
-                            LCH(73, 45, 1)
+                            <span>Dark: </span>
+                            <span><strong class="blue">L70</strong> / C90 / H240</span>
+                        </p>
+                    </div>
+                    <div>
+                        <div class="layout"></div>
+                        <p>
+                            <span>KeyColor: </span>
+                            <span><strong class="blue">L80</strong> / C90 / H360</span>
+                        </p>
+                        <p>
+                            <span>Light: </span>
+                            <span><strong class="blue">L90</strong> / C90 / H360</span>
+                        </p>
+                        <p>
+                            <span>Dark: </span>
+                            <span><strong class="blue">L70</strong> / C90 / H360</span>
                         </p>
                     </div>
                 </div>
             </article>
+        </section>
+        <section id="color-system-page">
+            <iframe class="active" src="/neumo-io/color-system/index.html" frameborder="0" border="0" cellspacing="0"
+                    style="border-style: none;" ></iframe>
         </section>
     </main>
 </div>
